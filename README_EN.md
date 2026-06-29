@@ -21,13 +21,6 @@ Core technology stack:
 | Tile protocol | PMTiles JS 4.4 | Parses PMTiles V3 format, reads tiles on demand via HTTP Range Requests |
 | Fonts / Icons | Noto Sans + Protomaps Sprites | Local offline text labeling and map symbols |
 
-## Data Acquisition
-
-The map data is stored in the `map` folder on the internal storage of a COROS watch, containing two subdirectories: `VCM` and `VSM`. Copy the entire `map` folder to your computer, then select it in the application to load and browse the maps.
-
-> Note: The map data files are large (approximately 6 GB) and are not included in this repository. Please extract them from your watch directly.
-
-
 ## Data Format
 
 ### PMTiles V3
@@ -250,7 +243,7 @@ The first build downloads and compiles Rust dependencies (Tauri + wry + tao), ta
 | File | Size | Description |
 |---|---|---|
 | `src-tauri/target/release/map-app.exe` | ~8.6 MB | Portable executable, can be run directly |
-| `src-tauri/target/release/bundle/nsis/MapViewer_0.1.0_x64-setup.exe` | ~6.7 MB | NSIS installer |
+| `src-tauri/target/release/bundle/nsis/MapViewer_0.2.0_x64-setup.exe` | ~6.7 MB | NSIS installer |
 
 ### Development Mode
 
@@ -272,6 +265,12 @@ codegen-units = 1   # Single compilation unit for better optimization
 opt-level = "s"     # Optimize for size over speed
 panic = "abort"     # Abort on panic, reducing binary size
 ```
+
+## Data Acquisition
+
+The map data is stored in the `map` folder on the internal storage of a COROS watch, containing two subdirectories: `VCM` and `VSM`. Copy the entire `map` folder to your computer, then select it in the application to load and browse the maps.
+
+> Note: The map data files are large (approximately 6 GB) and are not included in this repository. Please extract them from your watch directly.
 
 ## Data Directory Structure
 
